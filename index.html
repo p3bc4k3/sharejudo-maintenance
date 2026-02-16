@@ -1,238 +1,218 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex,nofollow">
-    <title>Alliance Judo Bassin Biterrois - Maintenance</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Alliance Judo Bassin Biterrois - Maintenance</title>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: #e0e0e0;
-            padding: 1rem;
-            animation: fadeIn 0.8s ease-in;
-        }
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
+    body{
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      color: #e0e0e0;
+      background: radial-gradient(900px 600px at 15% 20%, rgba(74,158,255,.14), transparent 60%),
+                  radial-gradient(900px 600px at 85% 80%, rgba(193,53,132,.10), transparent 60%),
+                  linear-gradient(135deg, #0f0f12 0%, #1c1c22 100%);
+      animation: fadeIn .7s ease-in;
+    }
 
-        .container {
-            max-width: 600px;
-            width: 100%;
-            background: rgba(40, 40, 40, 0.95);
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-            padding: 2.5rem;
-            text-align: center;
-            animation: slideUp 0.8s ease-out;
-        }
+    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
 
-        @keyframes slideUp {
-            from {
-                transform: translateY(30px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
+    .container{
+      width: min(640px, 100%);
+      background: rgba(40, 40, 40, 0.95);
+      border-radius: 18px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+      padding: 28px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,.06);
+      animation: slideUp .7s ease-out;
+    }
 
-        .logo {
-            max-width: 150px;
-            height: auto;
-            margin-bottom: 1.5rem;
-            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
-        }
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to   { transform: translateY(0); opacity: 1; }
+    }
 
-        .badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
-            color: #ffffff;
-            padding: 0.5rem 1.2rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
-        }
+    .logo-wrap{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
 
-        h1 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 0.75rem;
-            line-height: 1.2;
-        }
+    .logo{
+      max-width: 160px;
+      width: min(42vw, 160px);
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 6px 16px rgba(0,0,0,.35));
+    }
 
-        h2 {
-            font-size: 1.125rem;
-            font-weight: 500;
-            color: #b0b0b0;
-            margin-bottom: 2rem;
-        }
+    .badge{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: .2px;
+      margin: 8px 0 18px;
+      box-shadow: 0 6px 16px rgba(255, 107, 107, 0.25);
+    }
 
-        .message {
-            color: #c0c0c0;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            font-size: 1rem;
-        }
+    .badge::before{
+      content:"";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.9);
+      box-shadow: 0 0 0 3px rgba(255,255,255,.14);
+    }
 
-        .contact-section {
-            background: rgba(50, 50, 50, 0.6);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
+    h1{
+      font-size: clamp(1.35rem, 3.2vw, 1.85rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
 
-        .contact-section h3 {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 1rem;
-        }
+    h2{
+      font-size: clamp(1rem, 2.4vw, 1.15rem);
+      font-weight: 600;
+      color: #b7b7b7;
+      margin-bottom: 18px;
+    }
 
-        .contact-section a {
-            color: #4a9eff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
+    .message{
+      color: #c8c8c8;
+      line-height: 1.65;
+      font-size: 1rem;
+      margin-bottom: 18px;
+    }
 
-        .contact-section a:hover {
-            color: #6eb5ff;
-        }
+    .message p { margin: 6px 0; }
 
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+    .contact-section{
+      background: rgba(50, 50, 50, 0.6);
+      border-radius: 14px;
+      padding: 16px;
+      margin: 18px 0;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
 
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.75rem 1.5rem;
-            background: rgba(70, 70, 70, 0.8);
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+    .contact-section h3{
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 10px;
+    }
 
-        .social-link:hover {
-            background: rgba(90, 90, 90, 0.9);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
+    .contact-section a{
+      color: #4a9eff;
+      text-decoration: none;
+      font-weight: 650;
+      word-break: break-word;
+    }
 
-        .social-link.facebook {
-            background: rgba(24, 119, 242, 0.2);
-            border-color: rgba(24, 119, 242, 0.3);
-        }
+    .contact-section a:hover { color: #6eb5ff; }
 
-        .social-link.facebook:hover {
-            background: rgba(24, 119, 242, 0.3);
-        }
+    .social-links{
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 6px;
+    }
 
-        .social-link.instagram {
-            background: rgba(193, 53, 132, 0.2);
-            border-color: rgba(193, 53, 132, 0.3);
-        }
+    .social-link{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 14px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      color: #fff;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(70, 70, 70, 0.8);
+      min-height: 44px;
+    }
 
-        .social-link.instagram:hover {
-            background: rgba(193, 53, 132, 0.3);
-        }
+    .social-link:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+    }
 
-        .social-link.tiktok {
-            background: rgba(0, 0, 0, 0.3);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
+    .social-link.facebook{
+      background: rgba(24, 119, 242, 0.22);
+      border-color: rgba(24, 119, 242, 0.32);
+    }
+    .social-link.facebook:hover{ background: rgba(24, 119, 242, 0.32); }
 
-        .social-link.tiktok:hover {
-            background: rgba(0, 0, 0, 0.5);
-        }
+    .social-link.instagram{
+      background: rgba(193, 53, 132, 0.22);
+      border-color: rgba(193, 53, 132, 0.32);
+    }
+    .social-link.instagram:hover{ background: rgba(193, 53, 132, 0.32); }
 
-        @media (max-width: 480px) {
-            .container {
-                padding: 2rem 1.5rem;
-            }
+    .social-link.tiktok{
+      background: rgba(0, 0, 0, 0.30);
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+    .social-link.tiktok:hover{ background: rgba(0, 0, 0, 0.48); }
 
-            h1 {
-                font-size: 1.5rem;
-            }
+    @media (max-width: 560px){
+      body{ padding: 12px; }
+      .container{ padding: 22px 18px; }
+      .social-links{ grid-template-columns: 1fr; }
+    }
+  </style>
 
-            h2 {
-                font-size: 1rem;
-            }
-
-            .message {
-                font-size: 0.95rem;
-            }
-
-            .social-links {
-                flex-direction: column;
-            }
-
-            .social-link {
-                width: 100%;
-            }
-        }
-    </style>
-  <meta property="og:image" content="https://bolt.new/static/og_default.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+  <!-- (Optionnel) Métadonnées sociales : si tu ne veux aucun lien externe, supprime ces 2 lignes -->
+  <meta name="twitter:card" content="summary_large_image" />
 </head>
+
 <body>
-    <div class="container">
-        <img src="logo-ajbb.png" alt="Logo AJBB" class="logo">
-
-        <div class="badge">Maintenance en cours</div>
-
-        <h1>Alliance Judo Bassin Biterrois</h1>
-        <h2>Site temporairement en maintenance</h2>
-
-        <div class="message">
-            <p>Une intervention technique est en cours.</p>
-            <p>Nous remettons le service en ligne dès que possible.</p>
-            <p>Merci pour votre patience.</p>
-        </div>
-
-        <div class="contact-section">
-            <h3>Contact</h3>
-            <a href="mailto:alliancejudobassinbiterrois@gmail.com">alliancejudobassinbiterrois@gmail.com</a>
-        </div>
-
-        <div class="social-links">
-            <a href="https://www.facebook.com/groups/226073905995315/?locale=fr_FR" target="_blank" rel="noopener" class="social-link facebook">Facebook</a>
-            <a href="https://www.instagram.com/alliance_judo_bassin_biterrois/" target="_blank" rel="noopener" class="social-link instagram">Instagram</a>
-            <a href="https://www.tiktok.com/@ajbb707" target="_blank" rel="noopener" class="social-link tiktok">TikTok</a>
-        </div>
+  <div class="container">
+    <div class="logo-wrap">
+      <img src="logo-ajbb.png" alt="Logo AJBB" class="logo" />
     </div>
+
+    <div class="badge">Maintenance en cours</div>
+
+    <h1>Alliance Judo Bassin Biterrois</h1>
+    <h2>Site temporairement en maintenance</h2>
+
+    <div class="message">
+      <p>Une intervention technique est en cours.</p>
+      <p>Nous remettons le service en ligne dès que possible.</p>
+      <p>Merci pour votre patience.</p>
+    </div>
+
+    <div class="contact-section">
+      <h3>Contact</h3>
+      <a href="mailto:alliancejudobassinbiterrois@gmail.com">alliancejudobassinbiterrois@gmail.com</a>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.facebook.com/groups/226073905995315/?locale=fr_FR" target="_blank" rel="noopener" class="social-link facebook">Facebook</a>
+      <a href="https://www.instagram.com/alliance_judo_bassin_biterrois/" target="_blank" rel="noopener" class="social-link instagram">Instagram</a>
+      <a href="https://www.tiktok.com/@ajbb707" target="_blank" rel="noopener" class="social-link tiktok">TikTok</a>
+    </div>
+  </div>
 </body>
 </html>
